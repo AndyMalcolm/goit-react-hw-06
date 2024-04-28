@@ -12,8 +12,6 @@
     flex-direction: column;
     width: 100%;
     color: salmon;
-    background-color: crimson;
-    border-color: salmon;
 }
 
 .contact_form label input {
