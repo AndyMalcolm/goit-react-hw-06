@@ -2,10 +2,4 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* color: salmon;
-    background-color: crimson;
-    border-color: salmon; */
-    color: seagreen;
-    background-color: cornflowerblue;
-    border-color: seagreen;
 }

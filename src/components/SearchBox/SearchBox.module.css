@@ -2,16 +2,23 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }
 
 .search_box label {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 100%;
+    color: salmon;
 }
 
 .search_box label input {
     border-radius: 5px;
     height: 30px;
     padding: 0 10px;
+    color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }
