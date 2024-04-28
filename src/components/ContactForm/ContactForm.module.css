@@ -12,6 +12,8 @@
     flex-direction: column;
     width: 100%;
     color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }
 
 .contact_form label input {
@@ -19,10 +21,14 @@
     height: 30px;
     padding: 0 10px;
     color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }
 
 .contact_form button {
     padding: 10px 20px;
     border-radius: 5px;
     color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }

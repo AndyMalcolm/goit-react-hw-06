@@ -9,6 +9,8 @@
     padding: 8px 15px;
     border-radius: 5px;
     color: salmon;
+    background-color: crimson;
+    border-color: salmon;
 }
 
 .element_contact {
