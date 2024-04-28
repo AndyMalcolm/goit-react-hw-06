@@ -2,15 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: salmon;
 }
 
 .contact_item button {
     padding: 8px 15px;
     border-radius: 5px;
+    color: salmon;
 }
 
 .element_contact {
     display: flex;
     align-items: center;
     gap: 5px;
+    color: salmon;
 }
