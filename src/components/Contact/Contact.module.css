@@ -1,21 +1,26 @@
-.contact_item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: salmon;
+.personData {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
 }
-
-.contact_item button {
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: salmon;
-    background-color: crimson;
-    border-color: salmon;
+.personName {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
-
-.element_contact {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: salmon;
+.personPhon {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+p {
+  margin: 5px;
+}
+.iconPerson {
+  padding-right: 5px;
+  color: #111;
+}
+.iconPhon {
+  padding-right: 5px;
+  color: #111;
 }

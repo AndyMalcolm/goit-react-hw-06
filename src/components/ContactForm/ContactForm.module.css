@@ -1,32 +1,23 @@
-.contact_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    color: salmon;
+.contactForm {
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
 }
-
-.contact_form label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: salmon;
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
 }
-
-.contact_form label input {
-    border-radius: 5px;
-    height: 30px;
-    padding: 0 10px;
-    color: salmon;
-    background-color: crimson;
-    border-color: salmon;
+label {
+  margin-bottom: 10px;
 }
-
-.contact_form button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: salmon;
-    background-color: crimson;
-    border-color: salmon;
+input {
+  padding: 10px;
+  border: 1px solid #646cff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
 }

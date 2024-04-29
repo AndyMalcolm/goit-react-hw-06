@@ -1,61 +1,60 @@
-import { useEffect, useState } from "react";
-import { nanoid } from "nanoid";
+// import React, { useState, useEffect } from "react";
+import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
-import contactsUsers from "./ContactsUsers.json";
-import "./App.css";
-import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "./redux/contactsSlices";
-import { deleteContact } from "./redux/contactsSlices";
-import { changeFilter } from "./redux/filtersSlices";
 
 function App() {
-  const dispatch = useDispatch();
+  // const [contactDatas, setContactDatas] = useState(() => {
+  //   const savedContacts = window.localStorage.getItem("saved-contacts");
+  //   if (savedContacts) {
+  //     return JSON.parse(savedContacts);
+  //   }
+  //   return [];
+  // });
+  // const [filter, setFilter] = useState("");
 
-  const contacts = useSelector((state) => {
-    return state.contacts.items;
-  });
+  // const dispatch = useDispatch()
+  // const contacts = useSelector((state) => {
+  //   return state.contacts.items
+  // })
 
-  const filter = useSelector((state) => {
-    return state.filters.name;
-  });
+  // const filter = useSelector(state => state.contactsBox.filter)
 
-  useEffect(() => {
-    localStorage.setItem("ContactsUsers", JSON.stringify(contacts));
-  }, [contacts]);
+  // const onAddContact = (newContact) => {
+  //   const finalContact = {...newContact}
+  //   dispatch(addContact(finalContact))
+    // setContactDatas((prevContacts) => {
+    //   return [...prevContacts, newContact];
+    // });
+  // };
 
-  const onAddContact = (formData) => {
-    const finalContact = {
-      ...formData,
-      id: nanoid(),
-    };
-    const action = addContact(finalContact);
+  // const deleteContact = (contactId) => {
+    // const action = deleteContact(contactId)
+    // dispatch(action)
+    // dispatch(deleteContact(contactId))
+    // setContactDatas((prevContacts) => {
+    //   return prevContacts.filter((contactData) => contactData.id !== contactId);
+    // });
+  // };
 
-    dispatch(action);
-  };
 
-  const onDeleteContact = (contactId) => {
-    const action = deleteContact(contactId);
+  // const visibleContacts = (event) => {
+  //   dispatch(setFilter(event.target.value))
+  // }
+  // const visibleContacts = contactDatas.filter((contactData) =>
+  //   contactData.name.toLowerCase().includes(filter.toLowerCase())
+  // );
 
-    dispatch(action);
-  };
-
-  const filteredContacts = contacts.filter(
-    (contact) =>
-      contact.name.toLowerCase().includes(filter.toLowerCase()) ||
-      contact.number.toLowerCase().includes(filter.toLowerCase())
-  );
-
+  // useEffect(() => {
+  //   window.localStorage.setItem("saved-contacts", JSON.stringify(contactDatas));
+  // }, [contactDatas]);
   return (
-    <div className="App">
+    <div>
       <h1>Phonebook</h1>
-      <ContactForm onAddContact={onAddContact} />
-      <SearchBox filter={filter} />
-      <ContactList
-        contactsUsers={filteredContacts}
-        onDeleteContact={onDeleteContact}
-      />
+      <ContactForm />
+      <SearchBox />
+      <ContactList />
     </div>
   );
 }
