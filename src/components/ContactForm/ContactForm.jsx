@@ -5,8 +5,6 @@ import {
   MIN_CHAR_NAME_VALIDATION,
 } from "../../utils/constants";
 import * as Yup from "yup";
-import { useDispatch } from "react-redux"; //+
-import { addContact } from "../../redux/actions/contactActions"; //+
 import css from "./ContactForm.module.css";
 
 const contactFormSchema = Yup.object({
@@ -27,12 +25,9 @@ const contactFormSchema = Yup.object({
     .nullable(),
 });
 
-// const ContactForm = ({ onAddContact }) => {
-const ContactForm = () => { //+
-  const dispatch = useDispatch(); //+
-
+const ContactForm = ({ onAddContact }) => {
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values)); //+
+    onAddContact(values);
     actions.resetForm();
   };
   return (
