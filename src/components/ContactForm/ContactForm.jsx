@@ -1,6 +1,4 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/actions'; // Припускаючи, що у вас є така дія
 import {
   FORM_INITIAL_VALUES_CONTACT_FORM,
   MAX_CHAR_NAME_VALIDATION,
@@ -27,14 +25,11 @@ const contactFormSchema = Yup.object({
     .nullable(),
 });
 
-const ContactForm = () => {
-  const dispatch = useDispatch();
-
+const ContactForm = ({ onAddContact }) => {
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values)); // Відправляємо дію до store
+    onAddContact(values);
     actions.resetForm();
   };
-
   return (
     <Formik
       initialValues={FORM_INITIAL_VALUES_CONTACT_FORM}
